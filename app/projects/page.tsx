@@ -1,23 +1,24 @@
-import type { Metadata } from 'next';
-import ProjectCard from '@/components/project-card';
-import { supabase } from '@/lib/supabase';
-import type { Project } from '@/lib/supabase';
+import type { Metadata } from "next";
+import ProjectCard from "@/components/project-card";
+import { supabase } from "@/lib/supabase";
+import type { Project } from "@/lib/supabase";
 
 export const metadata: Metadata = {
-  title: 'Projects - Portfolio',
-  description: 'Browse my portfolio of web development projects showcasing my skills in React, Next.js, and modern web technologies.',
+  title: "Projects - Portfolio",
+  description:
+    "Browse my portfolio of web development projects showcasing my skills in React, Next.js, and modern web technologies.",
 };
 
 export const revalidate = 60;
 
 async function getProjects(): Promise<Project[]> {
   const { data, error } = await supabase
-    .from('projects')
-    .select('*')
-    .order('order_index', { ascending: true });
+    .from("projects")
+    .select("*")
+    .order("order_index", { ascending: true });
 
   if (error) {
-    console.error('Error fetching projects:', error);
+    console.error("Error fetching projects:", error);
     return [];
   }
 
@@ -48,7 +49,10 @@ export default async function ProjectsPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard
+              //  key={project.id}
+              //  project={project}
+              />
             ))}
           </div>
         )}
