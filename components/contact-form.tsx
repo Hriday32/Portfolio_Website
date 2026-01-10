@@ -28,9 +28,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // const { error } = await supabase.from('contact_submissions').insert([formData]);
-
-      // if (error) throw error;
+      console.log('Form submitted:', formData);
 
       toast({
         title: "Message sent!",

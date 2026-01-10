@@ -10,6 +10,7 @@ import Background from '@/components/ui/background';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: 'Portfolio - Frontend Developer',
   description: 'Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies. View my projects, experience, and get in touch.',
   openGraph: {

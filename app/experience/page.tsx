@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ExperienceCard from "@/components/experience-card";
+import { experiences } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Experience - Portfolio",
@@ -7,25 +8,7 @@ export const metadata: Metadata = {
     "View my professional work experience and career journey as a Frontend Developer.",
 };
 
-export const revalidate = 60;
-
-// async function getExperiences(): Promise<Experience[]> {
-//   const { data, error } = await supabase
-//     .from('experiences')
-//     .select('*')
-//     .order('order_index', { ascending: true });
-
-//   if (error) {
-//     console.error('Error fetching experiences:', error);
-//     return [];
-//   }
-
-//   return data || [];
-// }
-
-export default async function ExperiencePage() {
-  // const experiences = await getExperiences();
-
+export default function ExperiencePage() {
   return (
     <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -37,8 +20,7 @@ export default async function ExperiencePage() {
             My professional journey and career highlights
           </p>
         </div>
-        {/* <div>
-          {" "}
+        <div>
           {experiences.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -52,7 +34,7 @@ export default async function ExperiencePage() {
               ))}
             </div>
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );
