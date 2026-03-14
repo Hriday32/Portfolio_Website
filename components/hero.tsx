@@ -1,6 +1,10 @@
-import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import Link from "next/link";
+import { ArrowRight, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AboutPage from "@/app/about/page";
+import ProjectsPage from "@/app/projects/page";
+import ExperiencePage from "@/app/experience/page";
+import ContactPage from "@/app/contact/page";
 
 export default function Hero() {
   return (
@@ -25,9 +29,9 @@ export default function Hero() {
           </p>
 
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-            I craft beautiful, responsive, and user-friendly web applications using modern
-            technologies like React, Next.js, and TypeScript. Let's build something amazing
-            together.
+            I craft beautiful, responsive, and user-friendly web applications
+            using modern technologies like React, Next.js, and TypeScript. Let's
+            build something amazing together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,30 +42,50 @@ export default function Hero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base">
-              <a href="/contact">
-                Get in touch
-              </a>
+              <a href="/contact">Get in touch</a>
             </Button>
           </div>
 
           <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">1+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Year Experience</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                1+
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Year Experience
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">10+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                10+
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Projects Completed
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">5+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                5+
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Technologies
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">100%</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                100%
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Client Satisfaction
+              </div>
             </div>
           </div>
+        </div>
+        <div>
+          <AboutPage />
+          <ProjectsPage />
+          <ExperiencePage />
+          <ContactPage />
         </div>
       </div>
     </section>
